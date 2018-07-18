@@ -74,6 +74,7 @@ function Set-TargetResource
     {
         Write-Verbose -Message "[ERROR] An error occured while downloading $SourcePath"
         Write-Verbose -Message "        Error details: $($result.ErrorDescription)"
+        throw "Error while downloading $SourcePath"
     }
     else
     {
